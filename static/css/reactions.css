@@ -1,0 +1,44 @@
+/********************************************************/
+.reaction-buttons {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    margin-top: 10px;
+    /* Pushes down when scrolled into view */
+    scroll-margin-top: 55px;
+}
+
+.reaction-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.reaction-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.reaction-button img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.reaction-button img:hover {
+    transform: scale(1.2);
+}
+
+span {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.post-like-count, 
+.post-dislike-count {
+    color: var(--filter-title);
+}

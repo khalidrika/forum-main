@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--body-bg);
+    /* background-image: linear-gradient(#def1fa, #2da1e4); */
+    /* background-attachment: fixed; */
+}
+
+/* Utility class to hide and show elements */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/****************Enable-JS Warning***************/
+.noscript-warning {
+    background-color: var(--noscript-bg);
+    color: var(--grey-mr);
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    line-height: 1.5;
+    border: 0px;
+    border-radius: 8px;
+}
+
+.noscript-link {
+    color: var(--noscript-red);
+    text-decoration: underline;
+}
+
+/***********************************************
+******************** POSTS *********************
+************************************************/
+.main-content {
+    padding: 2rem;
+}
+
+.post-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 1px solid var(--border-grey);
+    border-radius: 12px;
+    padding: 20px 30px 20px 30px;
+    margin: 1rem auto;
+    margin-bottom: 30px;
+    max-width: 900px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#postTitle {
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-white);
+    margin-bottom: 20px;
+    font-family: 'Roboto', 'verdana', 'Arial Narrow Bold', sans-serif;
+    font-weight: 470;
+    font-size: 1.4rem;
+    overflow-wrap: anywhere;
+    color: var(--filter-title);
+}
+
+.post-card:hover {
+    box-shadow: 0px 3px 3px var(--post-card-shadow);
+}
+
+.post-card .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid var(--border-white);
+}
+
+.post-card .user-info {
+    font-size: 1rem;
+    color: var(--grey-mr);
+}
+
+.post-card .user-info .username {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.time-ago {
+    color: var(--light-grey);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.post-card .post-content {
+    font-size: 1.1rem;
+    color: var(--content-grey);
+    margin-bottom: 1rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+    font-family: 'Roboto';
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .post-card {
+        padding: 1rem;
+        margin: 0.5rem auto;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-content {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .post-content h3 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    #postTitle {
+        font-size: 1.1rem;
+    }
+
+    .post-card .post-content {
+        font-size: 0.9rem;
+    }
+
+    .post-card .user-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .post-card .user-info {
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+
+    .post-card .user-info .username {
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+    }
+
+    #tagFilterSection {
+        margin-top: 120px !important;
+    }
+
+    #tagFilterSection h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .tag-filter-input::placeholder {
+        font-size: 0.9rem;
+    }
+}
+
+/****************** Post Tags ******************/
+/* The container that holds tags + avatar + username */
+.post-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Absolutely position tags in top-right corner */
+.post-tags-container {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.post-tags {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--body-bg2);
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: var(--filter-title);
+}
+
+.tag-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+}
+
+@media (max-width: 900px) {
+    .post-header {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .post-tags-container {
+        position: static;
+        order: -1;
+        margin-bottom: 1rem;
+        right: auto;
+        top: auto;
+        width: 100%;
+        justify-content: left !important;
+        max-width: 100% !important;
+    }
+}
+
+
+/********************************************************
+                    TAG FILTER SECTION
+********************************************************/
+#tagFilterSection {
+    width: 90%;
+    margin: auto;
+    margin-top: 160px;
+    text-align: center;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+    color: var(--dark-grey);
+}
+
+@media (max-width: 500px) {
+    #tagFilterSection {
+        margin-top: 120px;
+        margin-bottom: 20px;
+    }
+}
+
+#tagFilterSection h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--filter-title);
+}
+
+#tagFilterContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid var(--border-grey);
+    padding: 7px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+/* Selected Tags */
+.selected-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+/* Input Field */
+.tag-filter-input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: none;
+    padding: 6px;
+    color: var(--filter-title);
+    width: 100%;
+}
+
+.tag-filter-input::placeholder {
+    color: var(--light-grey);
+}
+
+/* Suggestions Dropdown */
+.tag-suggestions {
+    position: absolute;
+    /* Float dropdown relative to #tagFilterContainer */
+    top: calc(100% + 6px);
+    /* Appear just below the container */
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--border-white);
+    border-radius: 8px;
+    z-index: 100;
+    font-size: 0.9rem;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.tag-suggestion-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    text-align: center;
+}
+
+.tag-suggestion-item:hover {
+    background-color: var(--light-blue);
+}
+
+/* Tag “Pill” Style */
+.tag-pill {
+    display: inline-flex;
+    align-items: center;
+}
+
+.remove-tag-btn {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: var(--tagclose-btn);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.remove-tag-btn:hover {
+    color: var(--grey-mr);
+}
+
+/**********************************
+           Comment counts             
+***********************************/
+
+#comment-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.comments-count {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--tagclose-btn);
+}
+
+#comments-counts {
+    margin-top: -20px;
+    max-width: 70%;
+}
+
+/******************** Remove Links Behaviour From Post Title *********************/
+.post-header-link {
+    text-decoration: none;
+    color: var(--title-color);
+    display: block;
+    /* To fill the container */
+}
+
+.post-header-link:hover {
+    color: var(--title-color-hvr);
+}

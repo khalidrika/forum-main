@@ -1,0 +1,10 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    stroke="#4d5463"
+    stroke-width="0.25"
+    stroke-linecap="round" 
+    troke-linejoin="round">
+    <path fill="#4d5463" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+    <title>Moon, switch to dark mode</title>
+</svg>

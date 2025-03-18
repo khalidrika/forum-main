@@ -1,0 +1,192 @@
+#commentsSection h3 {
+    color: #0584d8;
+}
+
+.comment-item {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    margin-bottom: 8px;
+}
+
+.comment-meta {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.comment-date {
+    margin-left: 10px;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.comment-content {
+    margin: 15px 5px;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    color: #444444;
+    line-height: 1.5;
+    font-family: 'Roboto', 'verdana', 'Arial Narrow Bold', sans-serif;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.comment-user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 2px solid #ddd;
+}
+
+.comment-reaction-buttons {
+    display: flex;
+    justify-content: left;
+    gap: 0.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*******************************************************
+                ADD NEW COMMENT FORM
+********************************************************/
+#addCommentContainer {
+    margin-top: 20px;
+}
+
+/* The form itself */
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* The textarea for writing a comment */
+
+#addCommentContainer {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 6px 6px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#commentContent {
+    flex: 1;
+    resize: none;
+    max-width: 8000px;
+    width: 100%;
+    min-height: 50px; 
+    max-height: 200px;
+    padding: 12px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-family: "Roboto", sans-serif;
+    background-color: #f0f2f5;
+    outline: none;
+    transition: height 0.2s ease-in-out;
+    overflow-y: auto; 
+}
+
+#commentContent:focus {
+    height: 60px; 
+    background-color: white;
+}
+
+#commentSubmit {
+    display: none; 
+    padding: 8px 15px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out;
+}
+
+#commentSubmit:hover {
+    background-color: #0d65d9;
+}
+
+#commentContent:not(:placeholder-shown) + #commentSubmit {
+    display: block;
+}
+
+:root.dark-mode #addCommentContainer {
+    background: rgba(55, 55, 65, 0.95);
+}
+
+:root.dark-mode #commentContent {
+    background-color: rgb(65, 65, 75);
+    color: white;
+}
+
+:root.dark-mode #commentContent:focus {
+    background-color: rgb(80, 80, 90);
+}
+
+/* The submit button */
+#commentSubmit {
+    align-self: self-start;
+    /* Button stays left-aligned (or change to flex-end) */
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1ea2fa;
+    /* Dark gray or your brand color */
+    border: none;
+    border-radius: 88px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 5px;
+}
+
+#commentSubmit:hover {
+    background-color: #0084ff;
+}
+
+
+/*****************************************
+            Show More Btn
+******************************************/
+#showMoreContainer {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#showMoreBtn {
+    background-color: #fff;
+    color: #0584d8;
+    border: 1px solid #58bafb;
+    border-radius: 4px;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#showMoreBtn:hover {
+    background-color: #44b2fc;
+    color: #fff;
+}

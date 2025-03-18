@@ -1,0 +1,158 @@
+/* ------------- New Post Modal ------------- */
+.post-dialog {
+    max-width: 600px;
+    width: 90%;
+    border-radius: 12px;
+    padding: 2rem;
+    background-color: var(--white);
+    text-align: center;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto; 
+    margin-top: 130px;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-dialog h2 {
+    margin-bottom: 20px;
+}
+
+.post-label {
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.post-input,
+.post-textarea {
+    background-color: var(--white);
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--submit-grey);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+
+
+.post-input:focus, 
+.post-textarea:focus {
+    border-color: var(--submit-btn);
+    outline: none;
+}
+
+.post-textarea {
+    resize: vertical;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.post-submit {
+    background-color: var(--submit-btn);
+    color: var(--white);
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.post-submit:hover {
+    background-color: var(--title-color);
+}
+
+
+/****************** TAGS/Categories *****************/
+/****************************************************/
+#tagInputContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 6px;
+    border: 1px solid var(--submit-grey);
+    border-radius: 4px;
+    min-height: 40px;
+    background-color: var(--white);
+    margin-bottom: 20px;
+}
+
+#tagInputContainer:focus-within {
+    border-color: var(--submit-btn);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag-input {
+    background-color: var(--white);
+    border: none;
+    outline: none;
+    flex: 1;
+    min-width: 100px;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 15px;
+    background-color: var(--white);
+    border: 1px solid var(--submit-grey);
+    border-radius: 10px;
+    z-index: 999;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.suggestions-box.hidden {
+    display: none;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--suggestion-list);
+}
+
+.suggestion-item:hover {
+    background-color: var(--modal-input-bg);
+}
+
+/* Tag pill styling */
+.tag-pill {
+    background-color: var(--tag-pill);
+    color: var(--grey-mr);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-right: 4px;
+}
+
+.tag-pill .remove-tag {
+    margin-left: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--tagclose-btn);
+    padding: 0;
+    font-size: 1rem;
+}
+
+.tag-pill .remove-tag:hover {
+    color: var(--dark-grey);
+}

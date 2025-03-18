@@ -1,0 +1,234 @@
+:root {
+    /*** Blues ***/
+    --body-bg: rgb(210, 229, 247);
+    --body-bg2: #e5edff;
+    /* #def; rgb(221, 237, 255);*/
+    --light-blue: #83dafd;
+    --title-color: #4398e7;
+    --title-color-hvr: #0084ff;
+    --submit-btn: #0079d3;
+    --nav-btn: #1ad1ff;
+    --nav-btn-hvr: #3eacf5;
+    --nav-menu-hvr: #61c8f8;
+    --tag-pill: #adceff;
+    --action-btn: #98d3ff;
+
+    --profile-bg: url('https://i.postimg.cc/1XCwNjhF/cover.png');
+
+
+    /*** Whites-Greys ***/
+    --white: #ffffff;
+    --modal-input-bg: #f4f4f4;
+    --theme-toggle: #fefefe;
+    --suggestion-list: #eee;
+    --border-white: #ddd;
+    --submit-grey: #ccc;
+    --border-grey: #c4c4c4;
+
+
+    /*** Grey Texts ***/
+    --light-grey: #7e7e7e;
+    --tagclose-btn: #646464;
+    --filter-title: #3f3f3f;
+    --content-grey: #333;
+    /* #353535; */
+    --grey-mr: #252525;
+    --dark-grey: #111;
+
+
+    /*** Shadows ***/
+    --trans-modal: rgba(0, 0, 0, 0.5);
+    --post-card-shadow: rgba(104, 104, 104, 0.315);
+    --notif-shadow: rgba(0, 0, 0, 0.2);
+    --navBar-shadow: rgba(0, 0, 0, 0.1);
+    --navMenu-shadow: rgba(0, 0, 0, 0.05);
+
+
+    /*** Reds ***/
+    --noscript-bg: #fcf0f0;
+    --noscript-red: rgb(250, 99, 99);
+    --notification-red: #ff4d4d;
+    --red-color: red;
+    --orange: orange;
+    --orange-hvr: rgb(255, 72, 0);
+}
+
+
+/* ===== Theme Toggle Button Styles ===== */
+.theme-toggle {
+    position: absolute; /* theme button overlap page elements */
+    top: 120px;
+    left: 30px;
+    z-index: 1000;
+    background-color: var(--theme-toggle);
+    cursor: pointer;
+    border: 2px solid var(--border-grey);
+    padding: 0.5rem;
+    border-radius: 80px;
+    display: flex;
+}
+
+@media (max-width: 500px) {
+    .theme-toggle {
+        top: 85px;
+    }
+}
+
+/* Adjust the size and color of the SVG icon */
+.theme-toggle img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+/* ===== Dark Mode Overrides ===== */
+:root.dark-mode {
+    /*** Blues ***/
+    --body-bg: #303030;
+    --body-bg2: #228bec;
+    --light-blue: rgb(76, 165, 248);
+    --title-color: #77b5ee;
+    --title-color-hvr: #4eaaff;
+    --submit-btn: #1ba4ff;
+    --nav-btn: #1ad1ff;
+    --nav-btn-hvr: #56b3ff;
+    --nav-menu-hvr: #2a79c2;
+    --tag-pill: #3895ec;
+    --action-btn: #0084ff;
+
+    --profile-bg: rgb(56, 56, 56);
+
+    /*** Whites-Greys ***/
+    --white: #3f3f3f;
+    --modal-input-bg: #5e5e5e;
+    --theme-toggle: #444b58;
+    --suggestion-list: #646464;
+    --border-white: #a8a6a6;
+    --submit-grey: #919191;
+    --border-grey: #4b4f5b;
+
+    /*** Grey Texts ***/
+    --light-grey: #dfdfdf;
+    --tagclose-btn: #ffffff;
+    --filter-title: #ffffff;
+    --content-grey: #e9e9e9;
+    --grey-mr: #e6e6e6;
+    --dark-grey: #d5d5d5;
+
+    /*** Shadows ***/
+    --trans-modal: rgba(0, 0, 0, 0.7);
+    --post-card-shadow: rgba(0, 0, 0, 0.4);
+    --notif-shadow: rgba(0, 0, 0, 0.25);
+    --navBar-shadow: rgba(0, 0, 0, 0.15);
+    --navMenu-shadow: rgba(0, 0, 0, 0.08);
+
+    /*** Reds ***/
+    --noscript-bg: #3b2b2b;
+    --noscript-red: #ff6b6b;
+    --notification-red: #ff3b3b;
+    --red-color: #ff4747;
+    --orange: #ffffff;
+    --orange-hvr: #ffae42;
+}
+
+/***** Fine Tunning ***/
+:root.dark-mode .dropdown-header {
+    background-color: rgb(96, 162, 248);
+    color: rgb(255, 255, 255);
+}
+
+:root.dark-mode .tag-pill {
+    color: white;
+}
+
+:root.dark-mode .post-card {
+    background-color: rgb(65, 65, 75);
+    /* rgb(65, 65, 65) */
+    border: 1px solid rgb(105, 105, 105);
+}
+
+:root.dark-mode .post-label,
+:root.dark-mode .post-input,
+:root.dark-mode .post-textarea,
+:root.dark-mode .tag-input,
+:root.dark-mode .auth-form label,
+:root.dark-mode .tag-suggestions,
+:root.dark-mode .suggestions-box,
+:root.dark-mode .switch-text,
+:root.dark-mode .fab,
+:root.dark-mode .post-dialog h2 {
+    color: white;
+}
+
+:root.dark-mode .post-submit {
+    background-color: #48c2fa;
+    color: rgb(255, 255, 255);
+}
+
+:root.dark-mode .post-submit:hover {
+    background-color: #67caf8;
+}
+
+:root.dark-mode .post-dialog{
+    background-color: #2e2e2e;
+}
+
+:root.dark-mode .suggestion-item:hover {
+    background-color: rgb(39, 197, 250);
+}
+
+:root.dark-mode .input-field {
+    color: rgb(243, 243, 243);
+    border: 1px solid rgb(136, 136, 136);
+}
+
+:root.dark-mode .input-field::placeholder {
+    color: rgb(174, 174, 174);
+}
+
+:root.dark-mode .submit-button:not(.disabled) {
+    background-color: #21aeff;
+    color: rgb(243, 243, 243);
+}
+
+:root.dark-mode .link {
+    color: #21aeff;
+}
+
+:root.dark-mode #commentsSection h3 {
+    color: #35bfff; 
+}
+
+:root.dark-mode .comment-content {
+    color: var(--content-grey);
+}
+
+:root.dark-mode .container {
+    background-color: rgb(65, 65, 75);
+}
+
+:root.dark-mode #commentContent {
+    background-color: rgb(55, 55, 65);
+    color: white;
+}
+
+:root.dark-mode .action-btn {
+    color:  white
+}
+
+:root.dark-mode .action-btn.active {
+    background-color: #228bec;
+}
+
+:root.dark-mode .comment-like-count,
+:root.dark-mode .comment-dislike-count {
+    color: var(--filter-title);
+}
+
+:root.dark-mode #commentContent:focus {
+    border-color: #35bfff;
+}
+
+:root.dark-mode .comment-item {
+    border-bottom: 1px solid #7a7a7a
+}

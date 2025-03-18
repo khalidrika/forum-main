@@ -1,0 +1,13 @@
+// Address the navigation issue in JS files in VS Code
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "baseUrl": "./", // Base path for module resolution
+    "paths": {
+      "*": [
+        "*",
+      ]
+    }
+  },
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dwi</title>
+
+        <script src="../js/themeLoader.js"></script>
+
+        <link rel="icon" href="../img/fav.png"
+            type="image/x-icon">
+
+        <!------- Cloudflare icon------>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet">
+
+        <!-------------- CSS Files ------------->
+        <link rel="stylesheet" href="../css/theme.css">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/navBar.css">
+        <link rel="stylesheet" href="../css/loginSignup.css">
+        <link rel="stylesheet" href="../css/postModal.css">
+        <link rel="stylesheet" href="../css/jsError.css">
+        <link rel="stylesheet" href="../css/reactions.css">
+
+    </head>
+
+    <body>
+
+        <!--- Navigation Bar (+ add post button) --->
+        <div id="navBar"></div>
+
+        <!-- Tag Filter Section -->
+        <section id="tagFilterSection">
+            <h3>Filter by tags</h3>
+            <div id="tagFilterContainer">
+                <div id="selectedTags" class="selected-tags"></div>
+                <input type="text" id="tagFilterInput" class="tag-filter-input"
+                    placeholder="Type a tag..." />
+                <div id="tagSuggestions" class="tag-suggestions hidden"></div>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <section id="postsContainer"></section>
+        </main>
+
+        <noscript>
+            <div class="noscript-warning" role="alert">
+                <p>JavaScript is disabled in your browser. Please enable
+                    JavaScript to use this site.</p>
+                <p>Click <a href="https://www.enable-javascript.com/"
+                        class="noscript-link">here</a> if you need help
+                    enabling your JavaScript.</p>
+            </div>
+        </noscript>
+
+        <script src="../js/globals.js"></script>
+        <script src="../js/helpers.js"></script>
+        <script src="../js/theme.js"></script>
+        <script src="../js/error.js"></script>
+        <script src="../js/login.js"></script>
+        <script src="../js/signup.js"></script>
+        <script src="../js/logout.js"></script>
+        <script src="../js/newPost.js"></script>
+        <script src="../js/postTags.js"></script>
+        <script src="../js/listeners.js"></script>
+        <script src="../js/navBar.js"></script>
+        <script src="../js/onLoad.js"></script>
+        <script src="../js/cooldown.js"></script>
+        <script src="../js/reactions.js"></script>
+        <script src="../js/filter.js"></script>
+        <script src="../js/renderPosts.js"></script>
+        <script src="../js/refreshers.js"></script>
+        <script src="../js/getPosts.js"></script>
+    </body>
+
+</html>

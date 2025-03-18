@@ -1,0 +1,27 @@
+
+/******************* Errors *******************
+*           For Display and PopError          *
+/**********************************************/
+.error-message {
+    color: var(--red-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.error-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--notification-red);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 4px var(--notif-shadow);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(0);
+}

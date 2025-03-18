@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dwi {{.StatusCode}}</title>
+
+        <link rel="icon" href="../img/fav.png"
+            type="image/x-icon">
+    </head>
+
+    <body>
+        <section class="page_status">
+            <h1>{{.StatusCode}}</h1>
+            <img src="https://i.postimg.cc/m2YyWRn0/cat.gif" alt="Error Image">
+            <h3>{{.Msg1}}</h3>
+            <p>{{.Msg2}}</p>
+            {{if eq .StatusCode 500}}
+            {{else}}
+            <a href="/">
+                <button class="home">Go Home</button>
+            </a>
+            {{end}}
+        </section>
+    </body>
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.page_status {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-family: "Arvo", serif;
+}
+
+.page_status h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.page_status img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.page_status button {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 8px;
+    padding: 13px 23px;
+    border: 1px solid rgb(101, 182, 248);
+    box-shadow:1px 1px 3px #555555;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: #fff;
+    color: #222222;
+    margin-top: 10px;
+}
+
+.page_status button:hover {
+    background: #cfe4fc;
+}
+</style>

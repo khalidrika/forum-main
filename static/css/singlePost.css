@@ -1,0 +1,94 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.username {
+    font-weight: 500;
+}
+
+/* Container */
+.container {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    color: var(--content-grey);
+    max-width: 800px;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid var(--border-grey);
+    box-shadow: 0 4px 10px var(--navBar-shadow);
+    padding: 20px;
+    margin: 20px auto;
+    margin-bottom: 100px;
+    margin-top: 180px;
+}
+
+.container h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Back to Home */
+.back-home {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--title-color);
+    transition: color 0.2s ease-in-out;
+}
+
+.back-link:hover {
+    color: var(--submit-btn);
+}
+
+.post-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Post Content */
+#singlepostContent {
+    font-size: 1rem;
+    border-top: 1px solid var(--border-white);
+    border-bottom: 1px solid var(--border-white);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    word-break: break-word;
+    /* Forces breaking long words */
+    overflow-wrap: break-word;
+    /* Ensures breaking even in modern browsers */
+    white-space: pre-line;
+    /* Keeps newlines but collapses extra spaces */
+
+}
+
+#singlepostContent p {
+    line-height: 1.3;
+    font-family: 'Roboto', 'verdana', 'Arial Narrow Bold', sans-serif;
+    color: var(--content-grey);
+}
+
+
+#singlecomments-counts {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .post-content {
+        font-size: 1rem;
+    }
+}
