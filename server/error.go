@@ -33,7 +33,7 @@ func ErrorHandler(w http.ResponseWriter, statusCode int, msg1, msg2 string, err 
 	ParseAndExecute(w, Error, "static/templates/error.html")
 }
 
-// Serve the error page from the json file error link.
+// Serve the error page from the json file² error link.ss
 func ServeCloudError(w http.ResponseWriter, error ErrorData, err error) {
 	log.Println(err)
 	errBody, err := GetErrorPage()
